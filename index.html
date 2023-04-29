@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body oncontextmenu="return false">
+    <div class="container">
+        <form action="" id="form">
+            <div class="field">
+                <label for="Username">Username</label>
+                <!-- <div class="tooltip"> -->
+                    <!-- <span class="tooltip-text">Please Enter Your User Name</span> -->
+                    <input type="text" class="getvalue" name="username" id="username" autocomplete="off" placeholder="Enter your username" pattern="/^[a-z A-Z][a-z A-Z 0-9-_$]{3,23}$/">
+                    <span class="error-one" id="user-error"></span>
+                <!-- </div> -->
+            </div>
+            <div class="field">
+                <label for="Email">Email</label>
+                <input type="email" class="getvalue" placeholder="Enter your email address" autocomplete="off" name="email" id="email" pattern="/^[^ ]+@[^ ]+\.[a-z]{2,3}$/">
+                <span class="error-two" id="email-error"></span>
+            </div>
+            <div class="field">
+                <label for="Password">Password</label>
+                <input type="password" class="getvalue" placeholder="Enter your password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                <span class="error-three" id="password-error"></span>
+            </div>
+            <div class="pass-visible">
+                <span><input class="check" type="checkbox" name="checkbox" id="checkbox">  Show Password</span>
+            </div>
+            <div class="message">
+                <h4>Password must match the following details:</h4>
+                <li class="invalid" id="letter">Must contain a LowerCase(small) letter</li>
+                <li class="invalid" id="capital">Must contain an UpperCase(capital) letter</li>
+                <li class="invalid" id="number">Must contain a Number</li>
+                <li class="invalid" id="length">Minimum of 8 characters</li>
+            </div>
+        </form>
+        <button class="signUp">Sign Up</button>
+
+    </div>
+<!-- <div class="preloader">
+  <div class="preloader-inner">
+    <div class="preloader-logo">
+      Insert your logo or any image here
+      <img src="./images/check-line.png" alt="">
+    </div>
+    <div class="preloader-progress"></div>
+  </div>
+</div> -->
+
+        <!-- <i class="ri-error-warning-fill"></i>
+        <i class="ri-checkbox-circle-fill"></i> -->
+    <!-- <script src="./script.js"></script> -->
+    <script src="./index.js"></script>
+</body>
+</html>
