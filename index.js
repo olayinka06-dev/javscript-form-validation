@@ -7,9 +7,11 @@ signUp.addEventListener("click", () => {
 
     if (userName.value == "") {
         document.getElementById("user-error").innerHTML = '<i class="ri-error-warning-fill"></i> Username is Required!';
+        document.getElementById("user-error").style.color = "red";
         userName.classList.add('getvalue-sub')
         userName.classList.remove('getvalue')
     }
+    
     else{
         document.getElementById("user-error").innerHTML = "";
         userName.classList.remove('getvalue-sub')
@@ -18,6 +20,7 @@ signUp.addEventListener("click", () => {
 
     if (email.value == "") {
         document.getElementById("email-error").innerHTML = '<i class="ri-error-warning-fill"></i>Email Address is Required!';
+        document.getElementById("email-error").style.color = "red";
         email.classList.add('getvalue-sub')
         email.classList.remove('getvalue')
     } else {
@@ -28,6 +31,7 @@ signUp.addEventListener("click", () => {
 
     if (password.value == "") {
         document.getElementById("password-error").innerHTML = '<i class="ri-error-warning-fill"></i>Password is Required!';
+        document.getElementById("password-error").style.color = "red";
         password.classList.add('getvalue-sub')
         password.classList.remove('getvalue')
     } else {
@@ -35,6 +39,12 @@ signUp.addEventListener("click", () => {
         password.classList.remove('getvalue-sub')
         password.classList.add('getvalue')
     }
+    
+    // if (userName.value == "" || email.value == "" || password.value == "") {
+    //     signUp.setAttribute()
+    // } else {
+        
+    // }
 });
 
 //USERNAME VALIDATIONS STARTS
@@ -56,15 +66,18 @@ userName.addEventListener("keyup", () => {
 
     if (userName.value.match(USER_REGEX)) {
         document.getElementById("user-error").innerHTML = "Username is Valid";
+        document.getElementById("user-error").style.color = "green";
         userName.classList.remove('getvalue-sub')
         userName.classList.add('getvalue')
     } else {
-        document.getElementById("user-error").innerHTML = '<i class="ri-error-warning-fill"></i>Invalid Username';
+        document.getElementById("user-error").innerHTML = '<i class="ri-error-warning-fill"></i>Invalid Username!';
+        document.getElementById("user-error").style.color = "red";
         userName.classList.add('getvalue-sub')
         userName.classList.remove('getvalue')
     }
     if (userName.value == "") {
         document.getElementById("user-error").innerHTML = '<i class="ri-error-warning-fill"></i>Username is Required!';
+        document.getElementById("user-error").style.color = "red";
         userName.classList.add('getvalue-sub')
         userName.classList.remove('getvalue')
     }
@@ -90,15 +103,18 @@ email.addEventListener("keyup", () => {
 
     if (email.value.match(EMAIL_REGEX)) {
         document.getElementById("email-error").innerHTML = "Email Address is Valid";
+        document.getElementById("email-error").style.color = "green";
         email.classList.remove('getvalue-sub')
         email.classList.add('getvalue')
     } else {
-        document.getElementById("email-error").innerHTML = '<i class="ri-error-warning-fill"></i>Email Address is Invalid';
+        document.getElementById("email-error").innerHTML = '<i class="ri-error-warning-fill"></i> Invalid Email Address!';
+        document.getElementById("email-error").style.color = "red";
         email.classList.add('getvalue-sub')
         email.classList.remove('getvalue')
     }
     if (email.value == "") {
-        document.getElementById("email-error").innerHTML = '<i class="ri-error-warning-fill"></i>Email Address Required';
+        document.getElementById("email-error").innerHTML = '<i class="ri-error-warning-fill"></i> Email Address Required!';
+        document.getElementById("email-error").style.color = "red";
         email.classList.add('getvalue-sub')
         email.classList.remove('getvalue')
     }
@@ -115,6 +131,7 @@ password.addEventListener("focus", () => {
 var password = document.getElementById("password");
 password.addEventListener("blur", () => {
     document.querySelector(".message").style.display = 'none';
+    document.getElementById("password-error").innerHTML = '';
 })
 
 var password = document.getElementById("password");
@@ -130,15 +147,18 @@ password.addEventListener("keyup", () => {
     var lengt = document.getElementById('length');
        
     if(password.value.match(PASSWORD_REGEX)){
-        document.getElementById("password-error").innerHTML = '<i class="ri-error-warning-fill"></i>Password is Valid';
+        document.getElementById("password-error").innerHTML = '<i class="ri-error-warning-fill"></i> Password is Valid';
+        document.getElementById("password-error").style.color = "green";
         password.classList.remove('getvalue-sub')
         password.classList.add('getvalue')
     }
     else{
-        document.getElementById("password-error").innerHTML = '<i class="ri-error-warning-fill"></i>Invalid! Password';
+        document.getElementById("password-error").innerHTML = '<i class="ri-error-warning-fill"></i> Invalid Password!';
+        document.getElementById("password-error").style.color = "red";
     }
     if (password.value == "") {
-        document.getElementById("password-error").innerHTML = '<i class="ri-error-warning-fill"></i>Password is Required!';
+        document.getElementById("password-error").innerHTML = '<i class="ri-error-warning-fill"></i> Password is Required!';
+        document.getElementById("password-error").style.color = "red";
         password.classList.add('getvalue-sub')
         password.classList.remove('getvalue')
     } 

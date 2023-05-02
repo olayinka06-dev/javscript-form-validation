@@ -52,15 +52,6 @@ signUp.addEventListener('click', () => {
         email.classList.add('getvalue')
         errTwo.style.visibility = 'hidden';
 
-        // errTwo.style.visibility = 'visible';
-        // errTwo.innerHTML = '<i class="ri-error-warning-fill"></i> Invalid Email Address';
-        // email.classList.add('getvalue-sub')
-        // email.classList.remove('getvalue')
-        // var signUp = document.querySelector('.signUp');
-        // signUp.style.background = 'rgb(86, 86, 199)';
-        // document.querySelector('.container').style.backgroundColor = 'lightgray';
-        // document.querySelector('.container').style.borderColor = 'blue';
-
         passWord.classList.remove('getvalue-sub')
         passWord.classList.add('getvalue')
         errThree.style.visibility = 'hidden';
@@ -107,9 +98,6 @@ signUp.addEventListener('click', () => {
         var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
         var errTwo = document.querySelector('.error-two')
 
-            // if (condition) {
-                
-            // }
             if (email.value.match(pattern)) {
                 email.classList.remove('getvalue-sub')
                 email.classList.add('getvalue')
