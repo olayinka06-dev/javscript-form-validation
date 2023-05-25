@@ -10,19 +10,16 @@
 </head>
 <body oncontextmenu="return false">
     <div class="container">
+        <h1>My Sign Up Page</h1>
         <form action="" id="form">
             <div class="field">
                 <label for="Username">Username</label>
-                <!-- <div class="tooltip"> -->
-                    <!-- <span class="tooltip-text">Please Enter Your User Name</span> -->
-                    <input type="text" class="getvalue" name="username" id="username" autocomplete="off" placeholder="Enter your username" pattern="/^[a-z A-Z][a-z A-Z 0-9-_$]{3,23}$/">
-                    <span class="error-one" id="user-error"></span>
-                    <span id="user-message"></span>
-                <!-- </div> -->
+                <input type="text" class="getvalue" name="username" id="username" autocomplete="off" placeholder="Enter your username" >
+                <span class="error-one" id="user-error"></span>
             </div>
             <div class="field">
                 <label for="Email">Email</label>
-                <input type="email" class="getvalue" placeholder="Enter your email address" autocomplete="off" name="email" id="email" pattern="/^[^ ]+@[^ ]+\.[a-z]{2,3}$/">
+                <input type="email" class="getvalue" placeholder="Enter your email address" autocomplete="off" name="email" id="email" >
                 <span class="error-two" id="email-error"></span>
             </div>
             <div class="field">
@@ -43,19 +40,6 @@
             <button class="signUp">Sign Up</button>
         </form>
     </div>
-<!-- <div class="preloader">
-  <div class="preloader-inner">
-    <div class="preloader-logo">
-      Insert your logo or any image here
-      <img src="./images/check-line.png" alt="">
-    </div>
-    <div class="preloader-progress"></div>
-  </div>
-</div> -->
-
-        <!-- <i class="ri-error-warning-fill"></i>
-        <i class="ri-checkbox-circle-fill"></i> -->
-    <!-- <script src="./script.js"></script> -->
     <script src="./index.js"></script>
 </body>
 </html>

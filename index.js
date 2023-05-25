@@ -1,5 +1,6 @@
 const signUp = document.querySelector(".signUp");
-signUp.addEventListener("click", () => {
+signUp.addEventListener("click", (e) => {
+
     var userName = document.getElementById("username");
     var email = document.getElementById("email");
     var password = document.getElementById("password");
@@ -40,11 +41,9 @@ signUp.addEventListener("click", () => {
         password.classList.add('getvalue')
     }
     
-    // if (userName.value == "" || email.value == "" || password.value == "") {
-    //     signUp.setAttribute()
-    // } else {
-        
-    // }
+    if (userName.value == "" || email.value == "" || password.value == "") {
+        e.preventDefault()
+    } 
 });
 
 //USERNAME VALIDATIONS STARTS
@@ -147,7 +146,7 @@ password.addEventListener("keyup", () => {
     var lengt = document.getElementById('length');
        
     if(password.value.match(PASSWORD_REGEX)){
-        document.getElementById("password-error").innerHTML = '<i class="ri-error-warning-fill"></i> Password is Valid';
+        document.getElementById("password-error").innerHTML = 'Password is Valid';
         document.getElementById("password-error").style.color = "green";
         password.classList.remove('getvalue-sub')
         password.classList.add('getvalue')
@@ -203,6 +202,16 @@ password.addEventListener("keyup", () => {
         lengt.classList.remove('valid')
         password.classList.add('getvalue-sub')
         password.classList.remove('getvalue')
+    }
+});
+var check = document.getElementById('checkbox');
+check.addEventListener('click', () => {
+    var password = document.getElementById("password");
+
+    if (password.type === 'password') {
+        password.type = 'text';
+    } else {
+        password.type = 'password';
     }
 })
 
